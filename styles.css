@@ -1,60 +1,207 @@
+/* =====================================
+   TASKFLOW - ESTILOS
+   ===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  margin: 0;
-  padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #212529;
+    line-height: 1.6;
 }
 
-.contenedor {
-  max-width: 700px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
+
+/* =====================================
+   ENCABEZADO
+   ===================================== */
+
+.header {
+    background: linear-gradient(135deg, #0d6efd, #084298);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
 }
 
-h1, h2 {
-  text-align: center;
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.header p {
+    font-size: 1.2rem;
 }
 
-input, textarea, button {
-  padding: 10px;
-  font-size: 16px;
+
+/* =====================================
+   CONTENEDOR
+   ===================================== */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
 }
+
+
+/* =====================================
+   SECCIONES
+   ===================================== */
+
+.task-form,
+.tasks-section,
+.api-section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.task-form h2,
+.tasks-section h2,
+.api-section h2 {
+    margin-bottom: 20px;
+    color: #212529;
+}
+
+
+/* =====================================
+   FORMULARIO
+   ===================================== */
+
+.form-group {
+    display: grid;
+    gap: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+
+/* =====================================
+   BOTONES
+   ===================================== */
 
 button {
-  background: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+    border: none;
+    background-color: #0d6efd;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-  background: #0056b3;
+    background-color: #084298;
+    transform: translateY(-2px);
 }
 
-li {
-  background: #eee;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 6px;
+
+/* =====================================
+   LISTA DE TAREAS
+   ===================================== */
+
+#listaTareas,
+#tareasAPI {
+    margin-top: 20px;
 }
 
-.completada {
-  text-decoration: line-through;
-  background: #c8f7c5;
+.task {
+    background-color: #f8f9fa;
+    border-left: 5px solid #0d6efd;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 6px;
 }
 
-#notificacion {
-  text-align: center;
-  font-weight: bold;
-  margin-top: 10px;
-  color: green;
+.task h3 {
+    margin-bottom: 8px;
+    color: #0d6efd;
+}
+
+.task p {
+    margin-bottom: 5px;
+    color: #495057;
+}
+
+
+/* =====================================
+   API
+   ===================================== */
+
+.api-section {
+    text-align: center;
+}
+
+.api-section button {
+    margin-bottom: 20px;
+}
+
+
+/* =====================================
+   FOOTER
+   ===================================== */
+
+.footer {
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+/* =====================================
+   DISEÑO RESPONSIVE
+   ===================================== */
+
+@media (max-width: 768px) {
+
+    .header h1 {
+        font-size: 2.2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .task-form,
+    .tasks-section,
+    .api-section {
+        padding: 20px;
+    }
 }
